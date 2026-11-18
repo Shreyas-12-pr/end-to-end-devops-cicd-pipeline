@@ -1,0 +1,22 @@
+FROM jenkins/jenkins:lts-jdk21
+
+USER root
+
+ARG KUBECTL_VERSION=v1.32.2
+ARG TARGETARCH
+
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends \
+       awscli \
+       ca-certificates \
+       curl \
+       docker.io \
+       git \
+       maven \
+    && rm -rf /var/lib/apt/lists/*
+
+RUN curl -fsSLo /usr/local/bin/kubectl \
+    "https://dl.k8s.io/release/${KUBECTL_VERSION}/bin/linux/${TARGETARCH}/kubectl" \
+    && chmod 0755 /usr/local/bin/kubectl
+
+USER jenkins

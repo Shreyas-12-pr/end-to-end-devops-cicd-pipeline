@@ -1,0 +1,12 @@
+END-TO-END DEVOPS CI/CD AUTOMATION PIPELINE
+
+Graduation Project Report and Implementation
+
+Student: Shreyas P R
+Institution: [Enter institution name]
+Department: [Enter department]
+Course: [Enter course/program]
+Supervisor: [Enter supervisor name]
+Submission date: [Enter date]
+
+Technology stack: GitHub, Jenkins, Maven, SonarQube, Docker, Kubernetes, AWS
